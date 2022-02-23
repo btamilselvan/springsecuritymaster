@@ -1,0 +1,15 @@
+server:
+   port: 8080
+   #servlet.context-path: /oac
+spring:
+   security:
+      oauth2:
+         client:
+            registration:
+               github:
+                  clientId: ad69770274e9a8f746ea
+                  clientSecret: ec3261de81e6ac61fd0762a4cdb60ebc1a8e93f2
+                  #redirect-uri:
+                  #scopes:
+                  
+ 
