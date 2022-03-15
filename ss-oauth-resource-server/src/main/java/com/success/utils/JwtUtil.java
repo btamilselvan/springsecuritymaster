@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import com.auth0.jwt.JWT;
@@ -15,6 +16,7 @@ import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
 
 @Component
+@Profile("!resourceserver")
 public class JwtUtil {
 
   @Autowired private RSAPublicKey publicKey;

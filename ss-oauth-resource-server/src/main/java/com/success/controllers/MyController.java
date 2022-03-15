@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MyController {
 
-  @Autowired private JwtUtil jwtUtil;
+  @Autowired(required = false) private JwtUtil jwtUtil;
 
   @GetMapping("/m1")
   public String methodOne(Principal user) {
