@@ -12,5 +12,6 @@
     <module>ss-oauth-client</module>
     <module>ss-oauth-resource-server</module>
     <module>ss-oauth-client-resource-server</module>
-	</modules>
+    <module>ss-oauth-server</module>
+  </modules>
 </project>

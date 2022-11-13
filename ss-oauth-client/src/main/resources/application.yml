@@ -1,6 +1,15 @@
 server:
-   port: 8080
-   #servlet.context-path: /oac
+   port: 8082
+#servlet.context-path: /oac
+management.endpoints.web.exposure.include: '*'
+logging:
+   level:
+      root: DEBUG
+      org:
+         springframework:
+            web: DEBUG
+            security: DEBUG
+            oauth2: DEBUG
 spring:
    security:
       oauth2:
@@ -9,7 +18,24 @@ spring:
                github:
                   clientId: ad69770274e9a8f746ea
                   clientSecret: ec3261de81e6ac61fd0762a4cdb60ebc1a8e93f2
-                  #redirect-uri:
-                  #scopes:
-                  
- 
+               km-client-oidc:
+                  provider: spring
+                  client-id: F4vpxE780RtfgF5
+                  client-secret: W3lcom33456
+                  authorization-grant-type: authorization_code
+                  redirect-uri: http://127.0.0.1:8082/login/oauth2/code/{registrationId}
+                  scope: openid,articles.read
+                  client-name: km-client-oidc
+               km-client-authorization-code:
+                  provider: spring
+                  client-id: F4vpxE780RtfgF5
+                  client-secret: W3lcom33456
+                  authorization-grant-type: authorization_code
+                  redirect-uri: http://127.0.0.1:8082/authorized
+                  scope: articles.read
+                  client-name: km-client-authorization-code
+#redirect-uri:
+#scopes:
+            provider:
+               spring:
+                  issuer-uri: http://kmauth-server:8080

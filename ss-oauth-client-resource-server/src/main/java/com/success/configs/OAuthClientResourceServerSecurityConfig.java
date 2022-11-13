@@ -46,5 +46,8 @@ public class OAuthClientResourceServerSecurityConfig extends WebSecurityConfigur
         .and()
         .and()
         .addFilterAfter(myFilter, BearerTokenAuthenticationFilter.class);
+    // adding oauth2ResourceServer() will enable oauth capabilities and add the
+    // BearerTokenAuthenticationFilter to the filter chain.
+    
   }
 }

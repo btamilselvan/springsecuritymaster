@@ -1,0 +1,20 @@
+server:
+   port: 8080
+jwt:
+   keystore: keystore.jks
+   key.alias: my-jwt-sigining-key
+   keystore.password: password
+   privatekey.password: password
+user:
+   oauth:
+      clientId: F4vpxE780RtfgF5
+      clientSecret: W3lcom33456
+management.endpoints.web.exposure.include: '*'
+logging:
+   level:
+      root: DEBUG
+      org:
+         springframework:
+            web: DEBUG
+            security: DEBUG
+            oauth2: DEBUG
